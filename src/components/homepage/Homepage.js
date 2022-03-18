@@ -3,6 +3,7 @@ import "./homepage.css";
 import fakeData from "../../data/data.json";
 import PrimaryAdsCard from "../cards/primaryAdsCard/PrimaryAdsCard";
 import SecondaryAdsCard from "../cards/secondaryAdsCard/SecondaryAdsCard";
+import HighPriorityNewsCard from "../cards/highPriorityNews/HighPriorityNewsCard";
 
 const Homepage = () => {
     console.log(fakeData);
@@ -11,16 +12,31 @@ const Homepage = () => {
             <div className="container">
                 <div className="mainContent">
                     <div className="topNewsContent">
-                        <div>Top News 1</div>
-                        <div>Top News 2</div>
+                        <HighPriorityNewsCard
+                            newsTitle={fakeData[0].title}
+                            newsDesc={fakeData[0].description}
+                            photo={fakeData[0].photo}
+                        />
+                        <HighPriorityNewsCard
+                            newsTitle={fakeData[1].title}
+                            newsDesc={fakeData[1].description}
+                        />
                         <div className="line"></div>
                     </div>
 
                     <div className="bottomNewsContent">
-                        <div>Bottom News 1</div>
-                        <div>Bottom News 2</div>
-                        <div>Bottom News 3</div>
+                        {fakeData.map((item) => {
+                            if (item.sort >= 3 && item.sort <= 5) {
+                                return (
+                                    <HighPriorityNewsCard
+                                        newsTitle={item.title}
+                                        newsDesc={item.description}
+                                    />
+                                );
+                            }
+                        })}
                         <div className="line"></div>
+
                         <div>Bottom News 4</div>
                         <div>Bottom News 5</div>
                         <div>Bottom News 6</div>

@@ -1,5 +1,5 @@
 .container {
-  margin-top: 20px;
+  margin: 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 0.8fr;
@@ -10,8 +10,9 @@
 .topNewsContent {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
 }
 
 .bottomNewsContent {
@@ -19,6 +20,7 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
 
 .mainContent {
@@ -59,8 +61,10 @@
 .line {
   grid-column: 1 / -1;
   height: 2px;
-  border-bottom: 1px solid black;
+  border-bottom: 3px solid #f7f7f7;
   width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -94,6 +98,11 @@
   .imageAd {
     width: 100%;
     height: auto;
+  }
+  .mainContent {
+    background-color: white;
+    padding: 10px;
+    border: none;
   }
 }
 /*# sourceMappingURL=homepage.css.map */

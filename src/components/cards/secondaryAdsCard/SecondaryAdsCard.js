@@ -14,7 +14,12 @@ function SecondaryAdsCard(props) {
                         marginBottom: "10px",
                     }}
                 >
-                    <Title titleText={imageTitle} bold={true} size={"16px"} />
+                    <Title
+                        titleText={imageTitle}
+                        bold={true}
+                        size={"16px"}
+                        fontColor={"blue"}
+                    />
                 </div>
             )}
 
