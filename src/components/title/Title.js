@@ -1,7 +1,7 @@
 import React from "react";
 
 function Title(props) {
-    const { titleText, bold, size, fontColor } = props;
+    const { titleText, bold, size, fontColor, supTitle } = props;
 
     console.log(bold, size);
     return (
@@ -12,6 +12,7 @@ function Title(props) {
                 color: fontColor ? fontColor : "black",
             }}
         >
+            <span style={{ color: "red" }}>{supTitle && `${supTitle} / `}</span>
             {titleText}
         </p>
     );

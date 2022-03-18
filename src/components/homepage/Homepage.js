@@ -21,6 +21,7 @@ const Homepage = () => {
                         <HighPriorityNewsCard
                             newsTitle={fakeData[1].title}
                             newsDesc={fakeData[1].description}
+                            supTitle={fakeData[1]["sup-title"]}
                         />
                         <div className="line"></div>
                     </div>
@@ -32,6 +33,7 @@ const Homepage = () => {
                                     <HighPriorityNewsCard
                                         newsTitle={item.title}
                                         newsDesc={item.description}
+                                        supTitle={item["sup-title"]}
                                     />
                                 );
                             }
@@ -44,6 +46,7 @@ const Homepage = () => {
                                     <LowPriorityNewsCard
                                         newsTitle={item.title}
                                         photo={item.photo}
+                                        supTitle={item["sup-title"]}
                                     />
                                 );
                             }
@@ -56,6 +59,7 @@ const Homepage = () => {
                                     <LowPriorityNewsCard
                                         newsTitle={item.title}
                                         photo={item.photo}
+                                        supTitle={item["sup-title"]}
                                     />
                                 );
                             }
@@ -68,11 +72,11 @@ const Homepage = () => {
                                     <LowPriorityNewsCard
                                         newsTitle={item.title}
                                         photo={item.photo}
+                                        supTitle={item["sup-title"]}
                                     />
                                 );
                             }
                         })}
-                        <div className="line"></div>
                     </div>
                 </div>
 

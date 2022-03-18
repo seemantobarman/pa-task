@@ -1,9 +1,8 @@
 import React from "react";
-import Description from "../../description/Description";
 import Title from "../../title/Title";
 import "./LowPriorityNewsCard.css";
 function LowPriorityNewsCard(props) {
-    const { newsTitle, photo } = props;
+    const { newsTitle, supTitle, photo } = props;
     return (
         <div>
             <div
@@ -20,7 +19,12 @@ function LowPriorityNewsCard(props) {
                         objectFit: "cover",
                     }}
                 />
-                <Title titleText={newsTitle} bold={true} size={"16px"} />
+                <Title
+                    titleText={newsTitle}
+                    bold={true}
+                    size={"16px"}
+                    supTitle={supTitle}
+                />
             </div>
         </div>
     );

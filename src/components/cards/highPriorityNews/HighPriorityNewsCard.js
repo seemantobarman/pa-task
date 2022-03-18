@@ -4,7 +4,7 @@ import Title from "../../title/Title";
 import "./HighPriorityNewsCard.css";
 
 function HighPriorityNewsCard(props) {
-    const { newsTitle, newsDesc, photo } = props;
+    const { newsTitle, newsDesc, photo, supTitle } = props;
 
     const truncatedText = (text) => {
         if (text && text.length > 100) {
@@ -19,7 +19,12 @@ function HighPriorityNewsCard(props) {
     return (
         <div className="hpNewsContainer">
             <div style={{ height: "100%" }}>
-                <Title titleText={newsTitle} bold={true} size={"18px"} />
+                <Title
+                    titleText={newsTitle}
+                    bold={true}
+                    size={"18px"}
+                    supTitle={supTitle}
+                />
                 <Description description={truncatedText(newsDesc)} />
             </div>
 
