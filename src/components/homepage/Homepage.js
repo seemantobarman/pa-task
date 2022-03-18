@@ -4,6 +4,7 @@ import fakeData from "../../data/data.json";
 import PrimaryAdsCard from "../cards/primaryAdsCard/PrimaryAdsCard";
 import SecondaryAdsCard from "../cards/secondaryAdsCard/SecondaryAdsCard";
 import HighPriorityNewsCard from "../cards/highPriorityNews/HighPriorityNewsCard";
+import LowPriorityNewsCard from "../cards/lowPriorityNews/LowPriorityNewsCard";
 
 const Homepage = () => {
     console.log(fakeData);
@@ -37,9 +38,40 @@ const Homepage = () => {
                         })}
                         <div className="line"></div>
 
-                        <div>Bottom News 4</div>
-                        <div>Bottom News 5</div>
-                        <div>Bottom News 6</div>
+                        {fakeData.map((item) => {
+                            if (item.sort >= 6 && item.sort <= 8) {
+                                return (
+                                    <LowPriorityNewsCard
+                                        newsTitle={item.title}
+                                        photo={item.photo}
+                                    />
+                                );
+                            }
+                        })}
+                        <div className="line"></div>
+
+                        {fakeData.map((item) => {
+                            if (item.sort >= 9 && item.sort <= 11) {
+                                return (
+                                    <LowPriorityNewsCard
+                                        newsTitle={item.title}
+                                        photo={item.photo}
+                                    />
+                                );
+                            }
+                        })}
+                        <div className="line"></div>
+
+                        {fakeData.map((item) => {
+                            if (item.sort >= 12) {
+                                return (
+                                    <LowPriorityNewsCard
+                                        newsTitle={item.title}
+                                        photo={item.photo}
+                                    />
+                                );
+                            }
+                        })}
                         <div className="line"></div>
                     </div>
                 </div>

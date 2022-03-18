@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "LowPriorityNewsCard.scss"
+    ],
+    "names": [],
+    "file": "LowPriorityNewsCard.css"
+}

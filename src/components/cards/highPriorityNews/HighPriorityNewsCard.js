@@ -1,4 +1,5 @@
 import React from "react";
+import Description from "../../description/Description";
 import Title from "../../title/Title";
 import "./HighPriorityNewsCard.css";
 
@@ -16,25 +17,10 @@ function HighPriorityNewsCard(props) {
     };
 
     return (
-        <div
-            style={{
-                display: "flex",
-                justifyContent: "space-between",
-                flexDirection: "row",
-                alignItems: "center",
-            }}
-        >
+        <div className="hpNewsContainer">
             <div style={{ height: "100%" }}>
                 <Title titleText={newsTitle} bold={true} size={"18px"} />
-                <p
-                    style={{
-                        marginTop: "10px",
-                        marginBottom: "10px",
-                        width: "100%",
-                    }}
-                >
-                    {truncatedText(newsDesc)}
-                </p>
+                <Description description={truncatedText(newsDesc)} />
             </div>
 
             {photo && (
