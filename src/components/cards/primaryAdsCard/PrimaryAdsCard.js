@@ -7,7 +7,13 @@ function PrimaryAdsCard(props) {
     return (
         <div>
             <div className="primaryAdsContainer">
-                <img src={imageLink} alt="Ad Space" className="rightImageAd" />
+                {imageLink && (
+                    <img
+                        src={imageLink}
+                        alt="Ad Space"
+                        className="rightImageAd"
+                    />
+                )}
 
                 {imageTitle && (
                     <div

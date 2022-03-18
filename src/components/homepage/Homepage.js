@@ -2,6 +2,7 @@ import React from "react";
 import "./homepage.css";
 import fakeData from "../../data/data.json";
 import PrimaryAdsCard from "../cards/primaryAdsCard/PrimaryAdsCard";
+import SecondaryAdsCard from "../cards/secondaryAdsCard/SecondaryAdsCard";
 
 const Homepage = () => {
     console.log(fakeData);
@@ -39,7 +40,12 @@ const Homepage = () => {
                         imageTitle={fakeData[11].title}
                     />
 
-                    <div>ad 3</div>
+                    <SecondaryAdsCard
+                        imageTitle={"ছাপা কাগজের মতো পড়ুন আজকের পত্রিকা"}
+                        imageLink={
+                            "https://images.prothomalo.com/prothomalo-bangla/2020-09/54ffe3e4-59b7-4c4a-9c97-b3d8769b2518/a2.jpg?rect=0,27,1432,752&w=1200&ar=40:21&auto=format,compress&ogImage=true&mode=crop&overlay&overlay_position=bottom&overlay_width_pct=1"
+                        }
+                    />
                 </div>
             </div>
 

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,KAAK,EAAE,GAAG;CACb;;AAED,AAAA,sBAAsB,CAAC;EACnB,OAAO,EAAE,IAAI;CAChB",
+    "sources": [
+        "SecondaryAdsCard.scss"
+    ],
+    "names": [],
+    "file": "SecondaryAdsCard.css"
+}

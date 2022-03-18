@@ -1,0 +1,10 @@
+.secondaryImageAd {
+  width: 30%;
+}
+
+.secondaryAdsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=SecondaryAdsCard.css.map */
