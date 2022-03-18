@@ -7,7 +7,6 @@ import HighPriorityNewsCard from "../cards/highPriorityNews/HighPriorityNewsCard
 import LowPriorityNewsCard from "../cards/lowPriorityNews/LowPriorityNewsCard";
 
 const Homepage = () => {
-    console.log(fakeData);
     return (
         <div>
             <div className="container">
@@ -17,10 +16,12 @@ const Homepage = () => {
                             newsTitle={fakeData[0].title}
                             newsDesc={fakeData[0].description}
                             photo={fakeData[0].photo}
+                            date={fakeData[0].time}
                         />
                         <HighPriorityNewsCard
                             newsTitle={fakeData[1].title}
                             newsDesc={fakeData[1].description}
+                            date={fakeData[1].time}
                             supTitle={fakeData[1]["sup-title"]}
                         />
                         <div className="line"></div>
@@ -31,8 +32,10 @@ const Homepage = () => {
                             if (item.sort >= 3 && item.sort <= 5) {
                                 return (
                                     <HighPriorityNewsCard
+                                        key={item.id}
                                         newsTitle={item.title}
                                         newsDesc={item.description}
+                                        date={item.time}
                                         supTitle={item["sup-title"]}
                                     />
                                 );
@@ -44,8 +47,10 @@ const Homepage = () => {
                             if (item.sort >= 6 && item.sort <= 8) {
                                 return (
                                     <LowPriorityNewsCard
+                                        key={item.id}
                                         newsTitle={item.title}
                                         photo={item.photo}
+                                        date={item.time}
                                         supTitle={item["sup-title"]}
                                     />
                                 );
@@ -57,8 +62,10 @@ const Homepage = () => {
                             if (item.sort >= 9 && item.sort <= 11) {
                                 return (
                                     <LowPriorityNewsCard
+                                        key={item.id}
                                         newsTitle={item.title}
                                         photo={item.photo}
+                                        date={item.time}
                                         supTitle={item["sup-title"]}
                                     />
                                 );
@@ -72,6 +79,7 @@ const Homepage = () => {
                                     <LowPriorityNewsCard
                                         newsTitle={item.title}
                                         photo={item.photo}
+                                        date={item.time}
                                         supTitle={item["sup-title"]}
                                     />
                                 );

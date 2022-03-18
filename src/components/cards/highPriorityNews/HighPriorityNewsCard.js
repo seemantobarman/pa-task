@@ -1,10 +1,11 @@
 import React from "react";
 import Description from "../../description/Description";
 import Title from "../../title/Title";
+import { PostedOnDate } from "../../date/PostedOnDate";
 import "./HighPriorityNewsCard.css";
 
 function HighPriorityNewsCard(props) {
-    const { newsTitle, newsDesc, photo, supTitle } = props;
+    const { newsTitle, newsDesc, photo, supTitle, date } = props;
 
     const truncatedText = (text) => {
         if (text && text.length > 100) {
@@ -26,6 +27,10 @@ function HighPriorityNewsCard(props) {
                     supTitle={supTitle}
                 />
                 <Description description={truncatedText(newsDesc)} />
+
+                <p
+                    style={{ marginTop: "20px", color: "#bababa" }}
+                >{`Posted ${PostedOnDate(date)} Hours Ago`}</p>
             </div>
 
             {photo && (
