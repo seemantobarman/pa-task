@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACV,KAAK,EAAE,IAAI;CACd;;AAED,AAAA,oBAAoB,CAAC;EACjB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,cAAc,EAAE,MAAM;EACtB,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,eAAe;CACjC",
+    "sources": [
+        "PrimaryAdsCard.scss"
+    ],
+    "names": [],
+    "file": "PrimaryAdsCard.css"
+}
