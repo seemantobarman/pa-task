@@ -6,7 +6,7 @@ import "./LowPriorityNewsCard.css";
 function LowPriorityNewsCard(props) {
     const { newsTitle, supTitle, photo, date } = props;
     return (
-        <div>
+        <div className="rowOne">
             <div
                 style={{
                     height: "100%",

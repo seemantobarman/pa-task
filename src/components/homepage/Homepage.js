@@ -25,8 +25,9 @@ const Homepage = () => {
                             date={fakeData[1].time}
                             supTitle={fakeData[1]["sup-title"]}
                         />
-                        <div className="line"></div>
                     </div>
+
+                    <div className="line"></div>
 
                     <div className="bottomNewsContent">
                         {fakeData.map((item) => {
@@ -42,8 +43,11 @@ const Homepage = () => {
                                 );
                             }
                         })}
-                        <div className="line"></div>
+                    </div>
 
+                    <div className="line"></div>
+
+                    <div className="bottomNewsContent">
                         {fakeData.map((item) => {
                             if (item.sort >= 6 && item.sort <= 8) {
                                 return (
@@ -57,8 +61,11 @@ const Homepage = () => {
                                 );
                             }
                         })}
-                        <div className="line"></div>
+                    </div>
 
+                    <div className="line"></div>
+
+                    <div className="bottomNewsContent">
                         {fakeData.map((item) => {
                             if (item.sort >= 9 && item.sort <= 11) {
                                 return (
@@ -72,8 +79,11 @@ const Homepage = () => {
                                 );
                             }
                         })}
-                        <div className="line"></div>
+                    </div>
 
+                    <div className="line"></div>
+
+                    <div className="bottomNewsContent">
                         {fakeData.map((item) => {
                             if (item.sort >= 12) {
                                 return (

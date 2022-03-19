@@ -6,4 +6,40 @@
 a {
   text-decoration: none;
 }
+
+.topNewsContent .hpNewsContainer {
+  border-right: 3px solid #f7f7f7;
+}
+
+.topNewsContent .hpNewsContainer:last-child {
+  border: 0;
+}
+
+.bottomNewsContent .hpNewsContainer {
+  border-right: 3px solid #f7f7f7;
+}
+
+.bottomNewsContent .hpNewsContainer:last-child {
+  border: 0;
+}
+
+.bottomNewsContent .rowOne {
+  border-right: 3px solid #f7f7f7;
+}
+
+.bottomNewsContent .rowOne:last-child {
+  border: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .topNewsContent .hpNewsContainer {
+    border-right: none;
+  }
+  .bottomNewsContent .hpNewsContainer {
+    border-right: none;
+  }
+  .bottomNewsContent .rowOne {
+    border-right: none;
+  }
+}
 /*# sourceMappingURL=Global.css.map */
