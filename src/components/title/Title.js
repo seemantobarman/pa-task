@@ -3,7 +3,6 @@ import React from "react";
 function Title(props) {
     const { titleText, bold, size, fontColor, supTitle } = props;
 
-    console.log(bold, size);
     return (
         <p
             style={{

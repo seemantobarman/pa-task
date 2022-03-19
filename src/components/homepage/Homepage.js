@@ -18,6 +18,7 @@ const Homepage = () => {
                             photo={fakeData[0].photo}
                             date={fakeData[0].time}
                         />
+
                         <HighPriorityNewsCard
                             newsTitle={fakeData[1].title}
                             newsDesc={fakeData[1].description}
@@ -77,6 +78,7 @@ const Homepage = () => {
                             if (item.sort >= 12) {
                                 return (
                                     <LowPriorityNewsCard
+                                        key={item.id}
                                         newsTitle={item.title}
                                         photo={item.photo}
                                         date={item.time}
@@ -109,6 +111,7 @@ const Homepage = () => {
                 </div>
             </div>
 
+            <div className="lineBig"></div>
             <div className="bottomAdsContainer">
                 <img
                     className="imageAd"
@@ -116,6 +119,7 @@ const Homepage = () => {
                     alt="Ad Space"
                 />
             </div>
+            <div className="lineBig"></div>
         </div>
     );
 };

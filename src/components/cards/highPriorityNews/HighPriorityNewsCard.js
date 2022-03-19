@@ -1,7 +1,7 @@
 import React from "react";
 import Description from "../../description/Description";
 import Title from "../../title/Title";
-import { PostedOnDate } from "../../date/PostedOnDate";
+import TimeOfPost from "../../date/TimeOfPost";
 import "./HighPriorityNewsCard.css";
 
 function HighPriorityNewsCard(props) {
@@ -9,7 +9,7 @@ function HighPriorityNewsCard(props) {
 
     const truncatedText = (text) => {
         if (text && text.length > 100) {
-            let newText = text.substring(0, 100) + "...";
+            let newText = text.substring(0, 150) + "...";
 
             return newText;
         } else {
@@ -20,17 +20,17 @@ function HighPriorityNewsCard(props) {
     return (
         <div className="hpNewsContainer">
             <div style={{ height: "100%" }}>
-                <Title
-                    titleText={newsTitle}
-                    bold={true}
-                    size={"18px"}
-                    supTitle={supTitle}
-                />
+                <a href="#">
+                    <Title
+                        titleText={newsTitle}
+                        bold={true}
+                        size={"18px"}
+                        supTitle={supTitle}
+                    />
+                </a>
                 <Description description={truncatedText(newsDesc)} />
 
-                <p
-                    style={{ marginTop: "20px", color: "#bababa" }}
-                >{`Posted ${PostedOnDate(date)} Hours Ago`}</p>
+                <TimeOfPost date={date} />
             </div>
 
             {photo && (

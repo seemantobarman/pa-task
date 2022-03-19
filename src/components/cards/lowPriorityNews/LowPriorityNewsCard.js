@@ -1,7 +1,8 @@
 import React from "react";
 import Title from "../../title/Title";
-import { PostedOnDate } from "../../date/PostedOnDate";
+import TimeOfPost from "../../date/TimeOfPost";
 import "./LowPriorityNewsCard.css";
+
 function LowPriorityNewsCard(props) {
     const { newsTitle, supTitle, photo, date } = props;
     return (
@@ -21,15 +22,16 @@ function LowPriorityNewsCard(props) {
                     }}
                 />
                 <div>
-                    <Title
-                        titleText={newsTitle}
-                        bold={true}
-                        size={"16px"}
-                        supTitle={supTitle}
-                    />
-                    <p
-                        style={{ marginTop: "20px", color: "#bababa" }}
-                    >{`Posted ${PostedOnDate(date)} Hours Ago`}</p>
+                    <a href="#">
+                        <Title
+                            titleText={newsTitle}
+                            bold={true}
+                            size={"16px"}
+                            supTitle={supTitle}
+                        />
+                    </a>
+
+                    <TimeOfPost date={date} />
                 </div>
             </div>
         </div>
